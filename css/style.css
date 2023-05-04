@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 
-.card-container {
-    background-color: aqua;
-    max-width: 200px;
-    height: 150px;
-    border: 1px solid red;
+.main-container {
+    padding: 2em;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
 }

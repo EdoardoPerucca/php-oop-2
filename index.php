@@ -19,21 +19,36 @@ require_once './db.php';
 <body>
     <div class="main-container">
         <h1>Pets Shop</h1>
+        <h2>Cani</h2>
 
-        <div class="card-container">
+        <table class="table">
+            <tr>
+                <th>Prodotto</th>
+                <th>Dimensione</th>
+                <th>Colore</th>
+                <th>immagine</th>
+                <th>Prezzo</th>
+
+            </tr>
+
             <?php
             foreach ($products as $product) {
             ?>
-                <ul>
-                    <li><?= $product->name ?></li>
-                    <li><?= $product->price ?></li>
-                    <li><?= $product->color ?></li>
-                </ul>
+
+                <tr>
+                    <td><?= $product->name ?></td>
+                    <td><?= $product->size ?></td>
+                    <td><?= $product->color ?></td>
+                    <td><?= $product->image ?></td>
+                    <td><?= $product->price ?></td>
+                </tr>
 
             <?php
             }
             ?>
-        </div>
+
+        </table>
+
 
     </div>
 
