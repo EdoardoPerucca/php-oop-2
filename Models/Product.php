@@ -1,19 +1,33 @@
 <?php
 
+require_once __DIR__ . "/Category.php";
+
 class Product
 {
-    public $name;
-    public $size;
-    public $color;
-    public $image;
-    public $price;
+    protected $name;
+    protected $price;
+    protected $category;
 
-    function __construct(string $name, string $size, string $color, $image, int $price)
+
+    function __construct(string $name, float $price, Category $category)
     {
         $this->name = $name;
-        $this->size = $size;
-        $this->color = $color;
-        $this->image = $image;
         $this->price = $price;
+        $this->category = $category;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
